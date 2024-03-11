@@ -1,12 +1,12 @@
 import { subscribe } from "./views/subscribe";
 
-const supportedAPI = ["init", "message"]; // enlist all methods supported by API (e.g. `mw('event', 'user-login');`)
+const supportedAPI = ["init", "subscribe"]; // enlist all methods supported by API (e.g. `mw('event', 'user-login');`)
 
 /**
     The main entry of the application
-    */
+*/
 function app(window) {
-  console.log("JS-Widget starting");
+  console.log("JS-Widget starting a");
 
   // set default configurations
   let configurations = {
@@ -45,7 +45,6 @@ function apiHandler(api, params) {
   console.log(`Handling API call ${api}`, params);
 
   switch (api) {
-    // TODO: add API implementation
     case "subscribe":
       subscribe(params);
       break;
